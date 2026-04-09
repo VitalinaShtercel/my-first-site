@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Моя перша сторінка</title>
+    <style>
+      body {
+        background-color: #000000;
+        color: white;
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+      }
+      h1 {
+        color: #8b0000;
+        text-align: center;
+      }
+      h2 {
+        color: #000000;
+        background-color: white;
+        padding: 5px 10px;
+      }
+      a {
+        color: #e94560;
+      }
+      img {
+        width: 150px;
+        border-radius: 50%;
+        border: 3px solid #8b0000;
+        display: block;
+        margin: 20px auto;
+      }
+      button {
+        background-color: #8b0000;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: block;
+        margin: 10px auto;
+      }
+      body.light {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      body.light h2 {
+        background-color: #000000;
+        color: #ffffff;
+      }
+      #themeBtn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        margin: 0;
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleTheme()" id="themeBtn">☀️ Світлий режим</button>
+    <img src="photo.jpg.JPG" alt="Моє фото">
+    <h1 id="title">Привіт! Я вчу HTML</h1>
+    <p>Це мій перший абзац тексту.</p>
+    <p>Мене звати Vitalina</p>
+
+    <h2>Про мене</h2>
+    <p>Мені 20 років і я вчу програмування.</p>
+
+    <h2>Мої цілі</h2>
+    <p>Хочу працювати в IT компанії.</p>
+
+    <h2>Мої навички</h2>
+    <ul>
+      <li>HTML — вчу</li>
+      <li>CSS — вчу</li>
+      <li>JavaScript — наступний</li>
+    </ul>
+
+    <a href="https://google.com">Перейти на Google</a>
+    <br><br>
+    <button onclick="showMessage()">Написати мені</button>
+    <button onclick="changeTitle()">Змінити заголовок</button>
+
+    <script>
+      function showMessage() {
+        alert("Дякую за увагу! Я навчаюсь і скоро буду Junior Developer 🚀");
+      }
+      function changeTitle() {
+        document.getElementById("title").innerText = "Я вже вмію JavaScript! 🔥";
+      }
+      function toggleTheme() {
+        document.body.classList.toggle("light");
+        const btn = document.getElementById("themeBtn");
+        if (document.body.classList.contains("light")) {
+          btn.innerText = "🌙 Темний режим";
+        } else {
+          btn.innerText = "☀️ Світлий режим";
+        }
+      }
+    </script>
+  </body>
+</html>
